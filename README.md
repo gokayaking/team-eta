@@ -8,3 +8,9 @@ files will go into data\ folder. Finally create a Readme file
 which contains all the instructions on how to use your script. You can put this readme file in main folder as well.
 
 
+NBACompareFG.py 
+
+Input - NBATeamDataGameLogs_Pre.csv and NBATeamDataGameLogs_Post.csv
+Output - output of t tests
+Description - reads pre covid team level data and covid team level data and does 
+t tests on FG% to see if differences.

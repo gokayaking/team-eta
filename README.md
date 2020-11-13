@@ -7,14 +7,10 @@ they will go into lib\ folder. If you are using data, then data
 files will go into data\ folder. Finally create a Readme file 
 which contains all the instructions on how to use your script. You can put this readme file in main folder as well.
 
-Hello? Can everyone see this? Omar here
 
-Todd here, can you see it?
+NBACompareFG.py 
 
-Testing John.
-
-Hello! Fariya here.
-
-Testing changes - Sucheta
-
-I'm here- George
+Input - NBATeamDataGameLogs_Pre.csv and NBATeamDataGameLogs_Post.csv
+Output - output of t tests
+Description - reads pre covid team level data and covid team level data and does 
+t tests on FG% to see if differences.

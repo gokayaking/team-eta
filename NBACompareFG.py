@@ -7,11 +7,10 @@ from scipy import stats
 pd.set_option('display.max_columns', None)
 
 compareColumn = "FG%"
-pre_filename = "NBATeamDataGameLogs_Pre.csv"
-post_filename = "NBATeamDataGameLogs_Post.csv"
-
-pre_df = pd.read_csv( "./data/" + pre_filename )
-post_df = pd.read_csv( "./data/" + post_filename )
+filename = "NBA Team Data Game Logs.xlsx"
+df = pd.read_excel( "./data/" + filename )
+pre_df=df[df.Date<"07/30/2020"]
+post_df=df[df.Date>"07/30/2020"]
 
 pre_df_lal = pre_df[pre_df['Team'] == "LAL" ]
 pre_df_mil = pre_df[pre_df['Team'] == "MIL" ]

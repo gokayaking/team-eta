@@ -13,7 +13,7 @@ import pandas as pd
 from scipy import stats
 
 os.getcwd()
-os.chdir("/Users/gtrailv5/CS504/GitHub/team-eta/data/")
+os.chdir("../data/")
 os.getcwd()
 
 playerData= pd.read_csv("NBA Player Game Log Data.csv")

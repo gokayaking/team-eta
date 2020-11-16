@@ -33,21 +33,23 @@ post_df_ind_five = post_df_ind.describe()
 post_df_den_five = post_df_den.describe() 
 
 
-lal_res = stats.ttest_ind( pre_df_lal['FG%'], post_df_lal['FG%'], equal_var=True )
 print( " pre_df_lal_five ", pre_df_lal_five )
 print( " post_df_lal_five ", post_df_lal_five )
 
-mil_res = stats.ttest_ind( pre_df_mil['FG%'], post_df_mil['FG%'], equal_var=True )
 print( " pre_df_mil_five ", pre_df_mil_five )
 print( " post_df_mil_five ", post_df_mil_five )
 
-ind_res = stats.ttest_ind( pre_df_ind['FG%'], post_df_ind['FG%'], equal_var=True )
 print( " pre_df_ind_five ", pre_df_ind_five )
 print( " post_df_ind_five ", post_df_ind_five )
 
-den_res = stats.ttest_ind( pre_df_den['FG%'], post_df_den['FG%'], equal_var=True )
 print( " pre_df_den_five ", pre_df_den_five )
 print( " post_df_den_five ", post_df_den_five )
+
+
+lal_res = stats.ttest_ind( pre_df_lal['FG%'], post_df_lal['FG%'], equal_var=True )
+mil_res = stats.ttest_ind( pre_df_mil['FG%'], post_df_mil['FG%'], equal_var=True )
+ind_res = stats.ttest_ind( pre_df_ind['FG%'], post_df_ind['FG%'], equal_var=True )
+den_res = stats.ttest_ind( pre_df_den['FG%'], post_df_den['FG%'], equal_var=True )
 
 print( " lil res ", lal_res )
 print( " mil res ", mil_res )

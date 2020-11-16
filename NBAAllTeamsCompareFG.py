@@ -30,6 +30,8 @@ pre_2019_2020_df = pre_df[pre_df.Season == "2019-20"]
 # print( " pre_df_lal_five ", pre_2018_2019_df_five )
 # print( " post_df_lal_five ", pre_2019_2020_df_five )
 
+print( "\n" )
+
 all_2018_2019_fg_percent_mean = pre_2018_2019_df["FG%"].mean()
 print( "2018-2019 FG% mean for all teams", all_2018_2019_fg_percent_mean)
 
@@ -38,6 +40,8 @@ print( "2019-2020 pre-covid FG% mean for all teams", all_2019_2020_fg_percent_me
 
 all_2019_2020_covid_fg_percent_mean = post_df["FG%"].mean()
 print( "2019-2020 covid FG% mean for all teams", all_2019_2020_covid_fg_percent_mean)
+
+print( "\n" )
 
 
 all_2018_2019_dvtg_percent_mean = pre_2018_2019_df["DRtg"].mean()
@@ -48,6 +52,8 @@ print( "2019-2020 pre-covid DRtg mean for all teams", all_2019_2020_dvtg_percent
 
 all_2019_2020_covid_dvtg_percent_mean = post_df["DRtg"].mean()
 print( "2019-2020 covid DRtg mean for all teams", all_2019_2020_covid_dvtg_percent_mean)
+
+print( "\n" )
 
 
 drtg_2018_2019_ttest = stats.ttest_ind( all_2018_2019_dvtg_percent_mean, all_2019_2020_dvtg_percent_mean, equal_var=True )

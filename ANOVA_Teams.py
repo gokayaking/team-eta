@@ -7,10 +7,9 @@ Created on Wed Nov 11 13:14:46 2020
 
 import pandas as pd
 import scipy.stats as stats
-from statsmodels.graphics.gofplots import qqplot
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("data/NBA Team Data Game Logs.csv")
+df = pd.read_excel("data/NBA Team Data Game Logs.xlsx")
 df = df.sort_values(by=['Season','Date'], ascending = False)
 df = df.reset_index(drop = True)
 df = df.drop(df.columns[[0, 1, 2, 3, 4, 5]], axis=1)
@@ -31,14 +30,14 @@ for i in range(9):
     
     
 left = [1, 2, 3, 4, 5, 6, 7, 8, 9]    
-plt.bar(left, result[1], tick_label = stats, width = .8, color = ['red', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'green'])
+plt.bar(left, result[1], tick_label = stats, width = .8, color = ['red', 'red', 'red', 'green', 'green', 'green', 'red', 'red', 'green'])
 plt.xlabel('Statistics')
 plt.ylabel('P Value')
 plt.title('NBA Team ANOVA Test P Values')
 plt.show()
     
 left = [1, 2, 3, 4, 5, 6, 7, 8, 9]    
-plt.bar(left, result[0], tick_label = stats, width = .8, color = ['red', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'green'])
+plt.bar(left, result[0], tick_label = stats, width = .8, color = ['red', 'red', 'red', 'green', 'green', 'green', 'red', 'red', 'green'])
 plt.xlabel('Statistics')
 plt.ylabel('F Value')
 plt.title('NBA Team ANOVA Test F Values')

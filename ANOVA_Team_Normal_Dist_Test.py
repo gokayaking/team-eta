@@ -10,7 +10,7 @@ import scipy.stats as stats
 from statsmodels.graphics.gofplots import qqplot
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("data/NBA Team Data Game Logs.csv")
+df = pd.read_excel("data/NBA Team Data Game Logs.xlsx")
 df = df.sort_values(by=['Season','Date'], ascending = False)
 df = df.reset_index(drop = True)
 df = df.drop(df.columns[[0, 1, 2, 3, 4, 5]], axis=1)

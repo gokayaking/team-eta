@@ -8,10 +8,10 @@ import pandas as pd
 import scipy.stats as stats
 
 
-df = pd.read_csv("data/NBA Player Game Log Data.csv")
+df = pd.read_excel("data/NBA Player Game Log Data.xlsx")
 df = df.sort_values(by=['Season','Date'], ascending = False)
 df = df.reset_index(drop = True)
-df = df.drop(df.columns[[0, 1, 2, 3, 4, 5, 13, 14]], axis=1)
+df = df.drop(df.columns[[0, 1, 2, 3, 4, 5]], axis=1)
 df = df.dropna()
 
 df_2019 = df.iloc[1162:, :]

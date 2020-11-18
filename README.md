@@ -8,9 +8,23 @@ files will go into data\ folder. Finally create a Readme file
 which contains all the instructions on how to use your script. You can put this readme file in main folder as well.
 
 
-NBACompareFG.py 
+NBA_Teamlevel_Describe.py 
 
-Input - NBATeamDataGameLogs_Pre.csv and NBATeamDataGameLogs_Post.csv
-Output - output of t tests
-Description - reads pre covid team level data and covid team level data and does 
-t tests on FG% to see if differences.
+Input - NBA Team Data Game Logs.xlsx
+Output - output of summary level statistics 
+Description - prints summary levelstatistics for the 4 teams
+
+NBA_Teamlevel_TTest.py 
+
+Input - NBA Team Data Game Logs.xlsx
+Output - output of summary level statistics 
+Description - Performs T Test for key statistics for 4 teams to compare pre and post
+covid
+
+
+NBA_AllTeams_TTest.py 
+
+Input - NBA Team Data Game Logs.xlsx
+Output - output of summary level statistics for all teams.
+Description - Performs T Test for key statistics for all teams to compare pre and post
+covid

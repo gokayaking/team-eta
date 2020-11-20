@@ -1,10 +1,9 @@
-
 import pandas as pd 
 from scipy import stats
 
 
 # do T Test and Log
-def doTTest( df_before, df_after, columnName ): 
+def doTTestForAllTeams( df_before, df_after, columnName ): 
     results = stats.ttest_ind( df_before[columnName], df_after[columnName], equal_var=True )
     print( " T Test for All Teams for statistic:", columnName, " ", results )
 
@@ -21,6 +20,6 @@ print( "\n" )
 
 columns = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'FTr', 'TS%', 'eFG%', 'FT/FGA']
 for column in columns:
-    doTTest( pre_df, post_df, column )
+    doTTestForAllTeams( pre_df, post_df, column )
 
 

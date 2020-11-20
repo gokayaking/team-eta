@@ -56,5 +56,3 @@ print( "2019-2020 covid DRtg mean for all teams", all_2019_2020_covid_dvtg_perce
 print( "\n" )
 
 
-drtg_2018_2019_ttest = stats.ttest_ind( all_2018_2019_dvtg_percent_mean, all_2019_2020_dvtg_percent_mean, equal_var=True )
-print( " drtg_2018_2019_ttest ", drtg_2018_2019_ttest )

@@ -22,30 +22,6 @@ post_df_mil = post_df[post_df['Team'] == "MIL" ]
 post_df_ind = post_df[post_df['Team'] == "IND" ]
 post_df_den = post_df[post_df['Team'] == "DEN" ]
 
-pre_df_lal_five = pre_df_lal.describe() 
-pre_df_mil_five = pre_df_mil.describe() 
-pre_df_ind_five = pre_df_ind.describe() 
-pre_df_den_five = pre_df_den.describe() 
-
-post_df_lal_five = post_df_lal.describe() 
-post_df_mil_five = post_df_mil.describe() 
-post_df_ind_five = post_df_ind.describe() 
-post_df_den_five = post_df_den.describe() 
-
-
-print( " pre_df_lal_five ", pre_df_lal_five )
-print( " post_df_lal_five ", post_df_lal_five )
-
-print( " pre_df_mil_five ", pre_df_mil_five )
-print( " post_df_mil_five ", post_df_mil_five )
-
-print( " pre_df_ind_five ", pre_df_ind_five )
-print( " post_df_ind_five ", post_df_ind_five )
-
-print( " pre_df_den_five ", pre_df_den_five )
-print( " post_df_den_five ", post_df_den_five )
-
-
 lal_res = stats.ttest_ind( pre_df_lal['FG%'], post_df_lal['FG%'], equal_var=True )
 mil_res = stats.ttest_ind( pre_df_mil['FG%'], post_df_mil['FG%'], equal_var=True )
 ind_res = stats.ttest_ind( pre_df_ind['FG%'], post_df_ind['FG%'], equal_var=True )

@@ -24,9 +24,7 @@ result = stats.f_oneway(df_2019, df_pre, df_post)
 stats = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'FTr', 'TS%', 'eFG%', 'FT/FGA']
 
 for i in range(9):
-    print('Stat: ' + stats[i])
-    print('F: ' + str(result[0][i]))
-    print('P Value: ' + str(result[1][i]) + "\n")
+    print(stats[i] + ': ' + 'F-ratio: ' + str(result[0][i]) + ' ' + 'P-value: ' + str(result[1][i]))
     
     
 left = [1, 2, 3, 4, 5, 6, 7, 8, 9]    

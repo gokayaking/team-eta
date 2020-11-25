@@ -10,13 +10,15 @@ import scipy.stats as stats
 
 df = pd.read_excel("data/NBA Player Game Log Data.xlsx")
 df = df.sort_values(by=['Season','Date'], ascending = False)
-df = df.reset_index(drop = True)
 df = df.drop(df.columns[[0, 1, 2, 3, 4, 5]], axis=1)
-df = df.dropna()
+df = df.reset_index(drop = True)
 
-df_2019 = df.iloc[1162:, :]
-df_pre = df.iloc[194:1162, :]
+df_2019 = df.iloc[1161:, :]
+df_2019 = df_2019.dropna()
+df_pre = df.iloc[194:1161, :]
+df_pre = df_pre.dropna()
 df_post = df.iloc[:194, :]
+df_post = df_post.dropna()
 
 result = stats.f_oneway(df_2019, df_pre, df_post)
 
@@ -24,9 +26,7 @@ result = stats.f_oneway(df_2019, df_pre, df_post)
 stats = ['FG%', 'FT', 'FTA', 'FT%', 'TS%', 'eFG%', 'DRtg']
 
 for i in range(7):
-    print('Stat: ' + stats[i])
-    print('F: ' + str(result[0][i]))
-    print('P Value: ' + str(result[1][i]) + "\n")
+   print(stats[i] + ': ' + 'F-ratio: ' + str(result[0][i]) + ' ' + 'P-value: ' + str(result[1][i]))
     
 import matplotlib.pyplot as plt
     

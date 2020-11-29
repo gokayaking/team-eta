@@ -8,7 +8,7 @@ import matplotlib.pyplot as plot
 def doShapiroForPre( df, columnName ): 
     results = stats.shapiro( df[columnName])
     print( " Shapiro Test for pre-COVID Teams for statistic:", columnName, " ", results )
-    # print("Shapiro Test for pre-COVID Players for statistic:", columnName, " ", results)
+    #print("Shapiro Test for pre-COVID Players for statistic:", columnName, " ", results)
     plot.hist(df[columnName])
     plot.title('Pre-COVID ' + columnName + ' distribution')
     plot.show()
@@ -17,7 +17,7 @@ def doShapiroForPre( df, columnName ):
 def doShapiroForPost( df, columnName ): 
     results = stats.shapiro( df[columnName])
     print( " Shapiro Test for post-COVID Teams for statistic:", columnName, " ", results )
-    # print("Shapiro Test for post-COVID Players for statistic:", columnName, " ", results)
+    #print("Shapiro Test for post-COVID Players for statistic:", columnName, " ", results)
     plot.hist(df[columnName])
     plot.title('Post-COVID ' + columnName + ' distribution')
     plot.show()
@@ -25,7 +25,7 @@ def doShapiroForPost( df, columnName ):
 pd.set_option('display.max_columns', None)
 
 filename = "NBA Team Data Game Logs.xlsx" # Team level data
-# filename = "NBA Player Game Log Data.xlsx" #Player level data
+#filename = "NBA Player Game Log Data.xlsx" #Player level data
 df = pd.read_excel( "./data/" + filename )
 pre_df=df[df.Date<"07/30/2020"]
 post_df=df[df.Date>"07/30/2020"]
@@ -34,7 +34,7 @@ post_df=df[df.Date>"07/30/2020"]
 print( "\n" )
 
 # Shapiro Wilk Test
-columns = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'FTr', 'TS%', 'eFG%', 'FT/FGA']
+columns = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'PF', 'TS%', 'eFG%', 'FT/FGA', '3P', '3PA', '3P%']
 for column in columns:
     doShapiroForPre(pre_df, column)
     doShapiroForPost(post_df, column)

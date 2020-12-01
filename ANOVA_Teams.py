@@ -28,14 +28,14 @@ for i in range(9):
     
     
 left = [1, 2, 3, 4, 5, 6, 7, 8, 9]    
-plt.bar(left, result[1], tick_label = stats, width = .8,)
+plt.bar(left, result[1], tick_label = stats, width = .8)
 plt.xlabel('Statistics')
 plt.ylabel('P Value')
 plt.title('NBA Team ANOVA Test P Values')
 plt.show()
     
 left = [1, 2, 3, 4, 5, 6, 7, 8, 9]    
-plt.bar(left, result[0], tick_label = stats, width = .8, color = ['red', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'green'])
+plt.bar(left, result[0], tick_label = stats, width = .8)
 plt.xlabel('Statistics')
 plt.ylabel('F Value')
 plt.title('NBA Team ANOVA Test F Values')

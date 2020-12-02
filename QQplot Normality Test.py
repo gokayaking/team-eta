@@ -26,6 +26,6 @@ for i in range(9):
     plt.show()
     
 for i in range(9):
-    qqplot(Post_COVID[stats[i]], line = 's')
+    qqplot(post_COVID[stats[i]], line = 's')
     plt.title('Post Covid ' + stats[i])
     plt.show()

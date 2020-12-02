@@ -34,16 +34,10 @@ post_COVID = data[data.Date>"07/30/2020"]
 print( "\n" )
 
 # Shapiro Wilk Test
-columns = ['FG%', 'FT', 'FTA', 'FT%', 'FTr', 'DRtg', 'PF', 'TS%', 'eFG%', 'FT/FGA', '3P', '3PA', '3P%']
+columns = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'PF', 'TS%', 'eFG%', 'FT/FGA', '3P', '3PA', '3P%']
 for column in columns:
     doShapiroForPre(pre_COVID, column)
     doShapiroForPost(post_COVID, column)
-    print ("\n")
-
-# Shapiro Wilk Test
-columns = ['FG%', 'FT', 'FTA', 'FT%',  'FTr', 'DRtg', 'PF', 'TS%', 'eFG%', 'FT/FGA', '3P', '3PA', '3P%']
-for column in columns:
-    doShapiroForPost(data, column)
     print ("\n")
 
 

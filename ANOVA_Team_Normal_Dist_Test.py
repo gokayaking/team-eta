@@ -11,19 +11,27 @@ from statsmodels.graphics.gofplots import qqplot
 import matplotlib.pyplot as plt
 import os
 
-
+<<<<<<< HEAD
 df = pd.read_excel("data/NBA Team Data Game Logs.xlsx")
-
+=======
 os.getcwd()
+os.chdir('/Users/Omar/Documents/GitHub/team-eta')
 os.getcwd()
 
 df = pd.read_excel("data/NBA Team Data Game Logs with attendance.xlsx")
+>>>>>>> a03476f534aa27a5cb011577977722dd27473482
 df = df.sort_values(by=['Season','Date'], ascending = False)
 df = df.reset_index(drop = True)
 df = df.drop(df.columns[[0, 1, 2, 3, 4, 5]], axis=1)
 
-stats = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'FTr', 'TS%', 'eFG%', 'FT/FGA']
+df_2019 = df.iloc[344:, :]
+df_pre = df.iloc[81:344, :]
+df_post = df.iloc[:81, :]
 
 for i in range(9):
-    qqplot(df[stats[i]], line = 's')
+    qqplot(df_2019[stats[i]], line = 's')
+    plt.show()
+    qqplot(df_pre[stats[i]], line = 's')
+    plt.show()
+    qqplot(df_post[stats[i]], line = 's')
     plt.show()

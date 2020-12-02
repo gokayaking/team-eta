@@ -17,7 +17,7 @@ post_df=df[df.Date>"07/30/2020"]
 print( "\n" )
 
 teams = ['LAL','MIL','IND','DEN']
-columns = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'FTr', 'TS%', 'eFG%', 'FT/FGA']
+columns = [ 'FG%', 'FT', 'FTA', 'FT%', 'FTr', 'TS%', 'eFG%', 'DRtg' ]
 for team in teams:
     pre_df_team = pre_df[pre_df['Team'] == team ]
     post_df_team = post_df[post_df['Team'] == team ]

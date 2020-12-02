@@ -1,11 +1,11 @@
 # team-eta
 Project repository for team Eta
 
-You main python code and files will be on inside 
-main folder. Then if you are using any particular libraries, 
-they will go into lib\ folder. If you are using data, then data 
-files will go into data\ folder. Finally create a Readme file 
-which contains all the instructions on how to use your script. You can put this readme file in main folder as well.
+Your main python code and files will be on inside main folder. 
+
+If you are using any particular libraries, they will go into lib\ folder.
+If you are using data, then data files will go into data\ folder. 
+
 
 
 Describe_Teams.py 
@@ -45,3 +45,5 @@ Input - NBA Team Data Game Logs.xlsx - in the code change the file path and run 
 Output - HEATMAP INDEX for pre and post covid dataset.
          XGBOOST algorithm - Prediction accuracy ,Recall,Precision ,confusion matrix and classification report.
                 
+
+

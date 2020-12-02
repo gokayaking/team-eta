@@ -80,6 +80,9 @@ preMatrix= preNumeric.corr()
 
 print(preMatrix)
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of f19fa74... Charts for Every Player
+=======
 >>>>>>> parent of f19fa74... Charts for Every Player
 =======
 >>>>>>> parent of f19fa74... Charts for Every Player
@@ -89,7 +92,11 @@ import matplotlib.pyplot as plt
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 sn.heatmap(corrMatrix, annot=True)
+=======
+sn.heatmap(preMatrix, annot=True)
+>>>>>>> parent of f19fa74... Charts for Every Player
 =======
 sn.heatmap(preMatrix, annot=True)
 >>>>>>> parent of f19fa74... Charts for Every Player

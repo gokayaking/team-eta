@@ -79,13 +79,20 @@ print(preNumeric)
 preMatrix= preNumeric.corr()
 
 print(preMatrix)
+<<<<<<< HEAD
+>>>>>>> parent of f19fa74... Charts for Every Player
+=======
 >>>>>>> parent of f19fa74... Charts for Every Player
 
 import seaborn as sn
 import matplotlib.pyplot as plt
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 sn.heatmap(corrMatrix, annot=True)
+=======
+sn.heatmap(preMatrix, annot=True)
+>>>>>>> parent of f19fa74... Charts for Every Player
 =======
 sn.heatmap(preMatrix, annot=True)
 >>>>>>> parent of f19fa74... Charts for Every Player

@@ -6,8 +6,12 @@
 
 import seaborn as sns
 import pandas as pd
+
+
 # Read source data
-df = pd.read_excel(r"C:\Users\e7crpmf\Documents\GitHub\team-eta\data\NBA Team Data Game Logs.xlsx")
+
+filename = "NBA Team Data Game Logs.xlsx"
+df = pd.read_excel( "./data/" + filename )
 df.head()
 
 

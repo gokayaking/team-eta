@@ -9,7 +9,7 @@ def doShapiroForPre(df, stat):
     results = stats.shapiro(df[stat])
     print( " Shapiro Test for pre-COVID Teams for statistic:", stat, " ", results )
     #print("Shapiro Test for pre-COVID Players for statistic:", stat, " ", results)
-    plot.hist(df[stat])
+    plot.hist(df[stat], bins=15, alpha=0.5, histtype='bar', ec='black')
     plot.title('Pre-COVID ' + stat + ' distribution')
     plot.show()
     
@@ -18,7 +18,7 @@ def doShapiroForPost(df, stat):
     results = stats.shapiro(df[stat])
     print( " Shapiro Test for post-COVID Teams for statistic:", stat, " ", results )
     #print("Shapiro Test for post-COVID Players for statistic:", stat, " ", results)
-    plot.hist(df[stat])
+    plot.hist(df[stat], bins=15, alpha=0.5, histtype='bar', ec='black')
     plot.title('Post-COVID ' + stat + ' distribution')
     plot.show()
 
@@ -34,7 +34,8 @@ post_COVID = data[data.Date>"07/30/2020"]
 print( "\n" )
 
 # Shapiro Wilk Test
-columns = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'PF', 'TS%', 'eFG%', 'FT/FGA', '3P', '3PA', '3P%']
+#columns = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'PF', 'TS%', 'eFG%', 'FT/FGA', '3P', '3PA', '3P%']
+columns = ['DRtg']
 for column in columns:
     doShapiroForPre(pre_COVID, column)
     doShapiroForPost(post_COVID, column)

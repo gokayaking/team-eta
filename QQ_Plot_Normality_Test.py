@@ -8,7 +8,7 @@ import pandas as pd
 import scipy.stats as stats
 from statsmodels.graphics.gofplots import qqplot
 import matplotlib.pyplot as plt
-import os
+
 
 pd.set_option('display.max_columns', None)
 

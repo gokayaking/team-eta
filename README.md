@@ -38,10 +38,11 @@ Output - output of summary level statistics for all teams.
 
 
 NBA_TEAM_PRE-POST_COVID_correlation.py
-
+XGBoost_Correlation_Test_Visualization_Teams.py
 Description - HEATMAP INDEX -Predicts Correlation coefficients for available variables for all teams to pre and post covid data.
               xgboost algorithm is used for classification problem, 80% data is used for training and 20% data is used for testing.  
-Input - NBA Team Data Game Logs.xlsx - in the code change the file path and run the code.
+Input - NBA Team Data Game Logs.xlsx - in the code change the file path to your local data file path and run the code.
 Output - HEATMAP INDEX for pre and post covid dataset.
          XGBOOST algorithm - Prediction accuracy ,Recall,Precision ,confusion matrix and classification report.
+         Confusion matrix - Visualization.
                 

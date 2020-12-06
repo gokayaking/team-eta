@@ -18,14 +18,14 @@ data = pd.read_excel( "./data/" + filename )
 pre_COVID = data[data.Date<"07/30/2020"]
 post_COVID = data[data.Date>"07/30/2020"]
 
-stats = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'FTr', 'TS%', 'eFG%', 'FT/FGA']
+stats = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'FTr', 'TS%', 'eFG%', 'FT/FGA', 'PF', '3P', '3PA', '3P%']
 
-for i in range(9):
+for i in range(13):
     qqplot(pre_COVID[stats[i]], line = 's')
     plt.title('Pre Covid ' + stats[i])
     plt.show()
     
-for i in range(9):
+for i in range(13):
     qqplot(post_COVID[stats[i]], line = 's')
     plt.title('Post Covid ' + stats[i])
     plt.show()

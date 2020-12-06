@@ -46,10 +46,11 @@ plt.xlabel('Statistics')
 plt.ylabel('P Value')
 plt.title('NBA Player ANOVA Test P Values')
 plt.axhline(y=.05, xmin=0, xmax=3.5, color='red')
+plt.ylim(0, 1)
 plt.show()
 
 ind = np.arange(3)  
-width = .35
+width = .30
 plt.bar(ind, [t_2019_2020[1][1], t_2019_2020[1][2], t_2019_2020[1][6]], width, label = '2019/2020')
 plt.bar(ind + width, [t_2020_post[1][1], t_2020_post[1][2], t_2020_post[1][6]], width, label = '2019/Post')
 plt.bar(ind + (2 * width), [t_2019_post[1][1], t_2019_post[1][2], t_2019_post[1][6]], width, label = '2020/Post')
@@ -60,4 +61,5 @@ plt.xlabel('Statistics')
 plt.ylabel('P Value')
 plt.title('NBA Team T Tests\' P Values')
 plt.legend(loc='best')
+plt.ylim(0, .1)
 plt.show()

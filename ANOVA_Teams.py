@@ -42,14 +42,15 @@ plt.xlabel('Statistics')
 plt.ylabel('P Value')
 plt.title('NBA Team ANOVA Test P Values')
 plt.axhline(y=.05, xmin=0, xmax=3.5, color='red')
+plt.ylim(0, 1)
 plt.show()
  
 
 ind = np.arange(6)  
 width = .25
-plt.bar(ind, [t_2019_2020[1][1], t_2019_2020[1][2], t_2019_2020[1][3], t_2019_2020[1][4], t_2019_2020[1][5], t_2019_2020[1][8]], width, label = '2019/2020')
-plt.bar(ind + width, [t_2020_post[1][1], t_2020_post[1][2], t_2020_post[1][3], t_2020_post[1][4], t_2020_post[1][5], t_2020_post[1][8]], width, label = '2019/Post')
-plt.bar(ind + (2 * width), [t_2019_post[1][1], t_2019_post[1][2], t_2019_post[1][3], t_2019_post[1][4], t_2019_post[1][5], t_2019_post[1][8]], width, label = '2020/Post')
+plt.bar(ind, [t_2019_2020[1][1], t_2019_2020[1][2], t_2019_2020[1][3], t_2019_2020[1][5], t_2019_2020[1][4], t_2019_2020[1][8]], width, label = '2019/2020 Pre COVID')
+plt.bar(ind + width, [t_2020_post[1][1], t_2020_post[1][2], t_2020_post[1][3], t_2020_post[1][5], t_2020_post[1][4], t_2020_post[1][8]], width, label = '2019/Post COVID')
+plt.bar(ind + (2 * width), [t_2019_post[1][1], t_2019_post[1][2], t_2019_post[1][3], t_2019_post[1][5], t_2019_post[1][4], t_2019_post[1][8]], width, label = '2020 Pre/Post')
 plt.axhline(y=.05, xmin=0, xmax=3.5, color='red')
 
 plt.xticks(ind + 2 * width / 3, ('FT', 'FTA', 'FT%', 'DRtg', 'FTr', 'FT/FGA'))
@@ -57,6 +58,7 @@ plt.xlabel('Statistics')
 plt.ylabel('P Value')
 plt.title('NBA Team T Tests\' P Values')
 plt.legend(loc='best')
+plt.ylim(0, 1)
 plt.show()
 
 

@@ -18,35 +18,35 @@ teams = ["LAL","MIL","IND","DEN"]
 sns.set_style( "whitegrid" )
 
 df_LAL = df[df['Team'] == "LAL" ]
-sns.boxplot( x=df_LAL["Type Of Play"], y=df_LAL["DRtg"], showfliers = False).set_title( "Comparing Defensive Rating for Lakers" )
+sns.boxplot( x=df_LAL["Type Of Play"], y=df_LAL["DRtg"], showfliers = False, showmeans=True).set_title( "Comparing Defensive Rating for Lakers" )
 plt.show()
-sns.boxplot( x=df_LAL["Type Of Play"], y=df_LAL["FTA"], showfliers = False).set_title( "Comparing Free Throw Attempts for Lakers" )
+sns.boxplot( x=df_LAL["Type Of Play"], y=df_LAL["FTA"], showfliers = False, showmeans=True).set_title( "Comparing Free Throw Attempts for Lakers" )
 plt.show()
-sns.boxplot( x=df_LAL["Type Of Play"], y=df_LAL["FTr"], showfliers = False).set_title( "Comparing Free Throw Attempts Rate for Lakers" )
+sns.boxplot( x=df_LAL["Type Of Play"], y=df_LAL["FTr"], showfliers = False, showmeans=True).set_title( "Comparing Free Throw Attempts Rate for Lakers" )
 plt.show()
 
 df_MIL = df[df['Team'] == "MIL" ]
-sns.boxplot( x=df_MIL["Type Of Play"], y=df_MIL["DRtg"], showfliers = False).set_title( "Comparing Defensive Rating for Bucks" )
+sns.boxplot( x=df_MIL["Type Of Play"], y=df_MIL["DRtg"], showfliers = False, showmeans=True).set_title( "Comparing Defensive Rating for Bucks" )
 plt.show()
-sns.boxplot( x=df_MIL["Type Of Play"], y=df_MIL["FTA"], showfliers = False).set_title( "Comparing Free Throw Attempts for Bucks" )
+sns.boxplot( x=df_MIL["Type Of Play"], y=df_MIL["FTA"], showfliers = False, showmeans=True).set_title( "Comparing Free Throw Attempts for Bucks" )
 plt.show()
-sns.boxplot( x=df_MIL["Type Of Play"], y=df_MIL["FTr"], showfliers = False).set_title( "Comparing Free Throw Attempts Rate for Bucks" )
+sns.boxplot( x=df_MIL["Type Of Play"], y=df_MIL["FTr"], showfliers = False, showmeans=True).set_title( "Comparing Free Throw Attempts Rate for Bucks" )
 plt.show()
 
 df_IND = df[df['Team'] == "IND" ]
-sns.boxplot( x=df_IND["Type Of Play"], y=df_IND["DRtg"], showfliers = False).set_title( "Comparing Defensive Rating for Pacers" )
+sns.boxplot( x=df_IND["Type Of Play"], y=df_IND["DRtg"], showfliers = False, showmeans=True).set_title( "Comparing Defensive Rating for Pacers" )
 plt.show()
-sns.boxplot( x=df_IND["Type Of Play"], y=df_IND["FTA"], showfliers = False).set_title( "Comparing Free Throw Attempts for Pacers" )
+sns.boxplot( x=df_IND["Type Of Play"], y=df_IND["FTA"], showfliers = False, showmeans=True).set_title( "Comparing Free Throw Attempts for Pacers" )
 plt.show()
-sns.boxplot( x=df_IND["Type Of Play"], y=df_IND["FTr"], showfliers = False).set_title( "Comparing Free Throw Attempts Rate for Pacers" )
+sns.boxplot( x=df_IND["Type Of Play"], y=df_IND["FTr"], showfliers = False, showmeans=True).set_title( "Comparing Free Throw Attempts Rate for Pacers" )
 plt.show()
 
 df_DEN = df[df['Team'] == "DEN" ]
-sns.boxplot( x=df_DEN["Type Of Play"], y=df_DEN["DRtg"], showfliers = False).set_title( "Comparing Defensive Rating for Nuggets" )
+sns.boxplot( x=df_DEN["Type Of Play"], y=df_DEN["DRtg"], showfliers = False, showmeans=True).set_title( "Comparing Defensive Rating for Nuggets" )
 plt.show()
-sns.boxplot( x=df_DEN["Type Of Play"], y=df_DEN["FTA"], showfliers = False).set_title( "Comparing Free Throw Attempts for Nuggets" )
+sns.boxplot( x=df_DEN["Type Of Play"], y=df_DEN["FTA"], showfliers = False, showmeans=True).set_title( "Comparing Free Throw Attempts for Nuggets" )
 plt.show()
-sns.boxplot( x=df_DEN["Type Of Play"], y=df_DEN["FTr"], showfliers = False).set_title( "Comparing Free Throw Attempts Rate for Nuggets" )
+sns.boxplot( x=df_DEN["Type Of Play"], y=df_DEN["FTr"], showfliers = False, showmeans=True).set_title( "Comparing Free Throw Attempts Rate for Nuggets" )
 plt.show()
 
 

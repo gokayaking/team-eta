@@ -4,11 +4,6 @@ import os
 import pandas as pd 
 from scipy import stats
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
-
-
 pd.set_option('display.max_columns', None)
 
 compareColumn = "FG%"
@@ -50,4 +45,16 @@ print( " post_df_ind_five ", post_df_ind_five )
 print( " pre_df_den_five ", pre_df_den_five )
 print( " post_df_den_five ", post_df_den_five )
 
+
+lal_res = stats.ttest_ind( pre_df_lal['FG%'], post_df_lal['FG%'], equal_var=True )
+mil_res = stats.ttest_ind( pre_df_mil['FG%'], post_df_mil['FG%'], equal_var=True )
+ind_res = stats.ttest_ind( pre_df_ind['FG%'], post_df_ind['FG%'], equal_var=True )
+den_res = stats.ttest_ind( pre_df_den['FG%'], post_df_den['FG%'], equal_var=True )
+
+print( "\n" )
+print( " lil res ", lal_res )
+print( " mil res ", mil_res )
+print( " ind res ", ind_res )
+print( " den res ", den_res )
+print( "\n" )
 

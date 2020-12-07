@@ -20,7 +20,7 @@ pre_2019_2020_df = pre_df[pre_df.Season == "2019-20"]
 
 
 
-columns = [ 'FG%', 'FT', 'FTA', 'FT%', 'FTr', 'TS%', 'eFG%', 'DRtg' ]
+columns = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'FTr', 'TS%', 'eFG%', 'FT/FGA', 'PF']
 for column in columns:
     doMeanCompare( pre_2018_2019_df, pre_2019_2020_df, post_df, column )
 

@@ -14,8 +14,8 @@ df = df.reset_index(drop = True)
 df = df.drop(df.columns[[0, 1, 2, 3, 4, 5]], axis=1)
 
 df_2019 = df.iloc[344:, :]
-df_pre = df.iloc[86:344, :]
-df_post = df.iloc[:86, :]
+df_pre = df.iloc[81:344, :]
+df_post = df.iloc[:81, :]
 
 
 stats = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'FTr', 'TS%', 'eFG%', 'FT/FGA']

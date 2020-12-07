@@ -18,7 +18,7 @@ post_df=df[df.Date>"07/30/2020"]
 
 print( "\n" )
 
-columns = [ 'FG%', 'FT', 'FTA', 'FT%', 'FTr', 'TS%', 'eFG%', 'DRtg' ]
+columns = ['FG%', 'FT', 'FTA', 'FT%', 'DRtg', 'FTr', 'TS%', 'eFG%', 'FT/FGA', 'PF']
 for column in columns:
     doTTestForAllTeams( pre_df, post_df, column )
 
